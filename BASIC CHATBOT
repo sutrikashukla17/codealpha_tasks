@@ -1,0 +1,25 @@
+# Function to process user input and give a reply
+def chatbot_response(user_input):
+    user_input = user_input.lower()  # convert to lowercase for easy matching
+
+    if "hello" in user_input:
+        return "Hi there!"
+    elif "how are you" in user_input:
+        return "I'm fine, thank you! How about you?"
+    elif "fine" in user_input or "good" in user_input:
+        return "That's great to hear!"
+    elif "your name" in user_input:
+        return "I'm ChatBot — your simple assistant."
+    elif "bye" in user_input or "goodbye" in user_input:
+        return "Goodbye! Have a nice day!"
+    else:
+        return "Sorry, I didn't understand that."
+
+# Main program
+print("🤖 ChatBot: Hello! Type 'bye' to end the chat.\n")
+
+while True:
+    user_message = input("You: ")
+    
+    # Stop the chat if user says 'bye'
+    if "bye" in user
